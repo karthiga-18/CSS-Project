@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+body{
+    min-height: 100vh;
+}
+
+.box{
+    /* min-width: 100px; */
+   
+    background-color: aquamarine;
+    color: black;
+    font-size: 2rem;
+    padding: 0.5rem;
+   
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+  
+ }
