@@ -28,8 +28,10 @@ img{
 
 body{
     min-height: 100vh;
+    background-image: url(../img/bu.png),linear-gradient(to left,steelblue,white);
+    background-repeat: repeat-y,no-repeat;
+    background-position: right;
     background-size: 20%, auto;
-    background: repeat-y right url(../img/bu.png),no-repeat,linear-gradient(to left,steelblue,white);
 }
 
 .container{
@@ -56,7 +58,6 @@ body{
     background-image: url(../img/bg.png);
     background-size: cover;
     -webkit-background-clip: text;
-    color:transparent;
 }
 
 .h1{
