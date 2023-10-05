@@ -1,29 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
 *{
-    margin: 0;
+    margin:0;
     padding: 0;
     box-sizing: border-box;
 }
+
+img{
+   display: block; 
+   max-width: 100%;
+   height: auto;
+}
+
+/* utility class */
+
+html{
+    scroll-behavior: smooth;
+}
 body{
-    min-height: 100vh;
-    padding: 20px;
+    font-size: 1.5rem;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: bisque;
+    background-image: radial-gradient(whitesmoke,gray);
+    display:flex ;
+    flex-direction: column;
 }
 
-
-body{
-    min-height: 100vh;
-}
-
-.box{
-    /* min-width: 100px; */
-   
-    background-color: aquamarine;
-    color: black;
-    font-size: 2rem;
-    padding: 0.5rem;
-   
-}
-.container{
-    display: grid;
-    grid-template-columns: repeat(4, 2fr);
+header,footer{
   
+    background-color: rgb(64, 155, 224);
+    color: white;
+    text-align: center;
+    
+}
+header{
+    top: 0;
+}
+nav{
+    background-color: white;
+    padding: 0.5rem;
+    border-bottom: 2px solid #000;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a,nav a:visited{
+    color: #000;
+}
+
+nav a, nav a:hover{
+    color: blueviolet;
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1.5rem;
+    padding: 1rem;
+}
+
+footer{
+    bottom: 0;
+}
+
+
+/* profile card */
+
+.card{
+    scroll-margin-top: 5rem;
+    width: min(100%,350px);
+    background-color: azure;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.card figure{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+.card img{
+
+    border: 5px double #333;
+    border-radius: 50%;
+}
+
+
+.card figcaption{
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+@media screen and (min-width:576px) {
+    
+    main{
+        justify-content: center;
+        flex-flow: row nowrap;
+        padding: 1rem;
+    }
+    .card{
+        width: min(100%, 400px);
+    }
+
+    .card:last-child{
+        order: -1;
+    }
+}
+@media screen and (min-width:576px) {
+    
+    main{
+        justify-content: center;
+        flex-flow: row nowrap;
+        padding: 1rem;
+    }
+    .card{
+        width: min(100%, 400px);
+    }
+
+    .card:last-child{
+        order: -1;
+    }
+}
+
+@media screen and (min-width:768px) {
+    
+    nav{
+        display: none;
+    }
+    .card{
+        width: min(100%, 320px);
+    }
+
+    .card figure{
+        flex-flow:column-reverse;
+    }
+    .card p{
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width:992px) {
+    
+ 
+    .card{
+        width: min(100%, 400px);
+    }
+
+    .card:nth-child(2){
+        order: -1;
+    }
+}
+
+@media screen and (min-width:1200px) {
+ .card{
+
+    width:min(33% -1rem, 500px);
  }
+    
+}
+
+@media screen and (max-height:425px) and (min-aspect-ratio:7/4) {
+
+
+
+    h1{
+        font-size: 1rem;
+    }
+    nav{
+        display: none;
+    }
+    main{
+        flex-flow: row nowrap;
+    }
+    footer{
+        bottom: 0;
+    }
+}
+
+
